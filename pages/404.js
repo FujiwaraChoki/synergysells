@@ -13,10 +13,10 @@ const NotFound = () => {
                         SynergySells
                     </Link>
 
-                    <p class="mb-4 text-sm font-semibold uppercase text-indigo-500 md:text-base">Thas's a 404</p>
+                    <p class="mb-4 text-sm font-semibold uppercase text-indigo-500 md:text-base">Thas&apos;s a 404</p>
                     <h1 class="mb-2 text-center text-2xl font-bold text-gray-800 md:text-3xl">Page not found</h1>
 
-                    <p class="mb-12 max-w-screen-md text-center text-gray-500 md:text-lg">The page you're looking for doesn't exist.</p>
+                    <p class="mb-12 max-w-screen-md text-center text-gray-500 md:text-lg">The page you&apos;re looking for doesn&apos;t exist.</p>
 
                     <Link href="/" class="inline-block rounded-lg bg-gray-200 px-8 py-3 text-center text-sm font-semibold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base">Go home</Link>
                 </div>

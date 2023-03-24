@@ -36,12 +36,12 @@ const Navbar = () => {
 
     return (
         <header className="mb-4 flex items-center justify-between py-4 md:py-8">
-            <a href="/" onClick={scrollToTop} className="text-black-800 inline-flex items-center gap-2.5 text-2xl font-bold md:text-3xl" aria-label="logo">
+            <Link href="/" onClick={scrollToTop} className="text-black-800 inline-flex items-center gap-2.5 text-2xl font-bold md:text-3xl" aria-label="logo">
                 <svg width="95" height="94" viewBox="0 0 95 94" className="h-auto w-6 text-indigo-500" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path d="M96 0V47L48 94H0V47L48 0H96Z" />
                 </svg>
                 SynergySells
-            </a>
+            </Link>
 
             <nav className="hidden gap-12 lg:flex">
                 <Link href="/" onClick={() => {
