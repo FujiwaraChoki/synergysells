@@ -37,7 +37,7 @@ const LandingPage = () => {
               <div class="mb-10 md:mb-16">
                 <h2 class="mb-4 text-center text-2xl font-bold text-gray-800 md:mb-6 lg:text-3xl">FAQ</h2>
 
-                <p class="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">Here you'll find answers to all FAQ about SynergySells.</p>
+                <p class="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">Here you&apos;ll find answers to all FAQ about SynergySells.</p>
               </div>
 
               <div class="grid gap-8 sm:grid-cols-2 sm:gap-y-10 xl:grid-cols-3">
