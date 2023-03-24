@@ -10,7 +10,23 @@ const ContactForm = () => {
 
                     <p class="mx-auto max-w-screen-md text-center text-gray-500 md:text-lg">{config.contact.description}</p>
                 </div>
-                <form class="mx-auto grid max-w-screen-md gap-4 sm:grid-cols-2">
+                <form class="mx-auto grid max-w-screen-md gap-4 sm:grid-cols-2" onSubmit={(e) => {
+                    // Get all form data
+                    const formData = new FormData(e.target);
+
+                    fetch('https://formspree.io/f/mzbqzodp', {
+                        method: 'POST',
+                        body: formData,
+                        headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json'
+                        }
+                    }).then(response => {
+                        console.log(response);
+                    }).catch(error => {
+                        console.log(error);
+                    });
+                }}>
                     <div>
                         <label for="first-name" class="mb-2 inline-block text-sm text-gray-800 sm:text-base">First name*</label>
                         <input name="first-name" class="w-full rounded border bg-gray-50 px-3 py-2 text-gray-800 outline-none ring-indigo-300 transition duration-100 focus:ring" />
