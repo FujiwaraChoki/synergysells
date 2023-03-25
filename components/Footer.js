@@ -4,17 +4,16 @@ import Link from "next/link";
 
 const Footer = () => {
     const [email, setEmail] = useState("");
-    const [response, setResponse] = useState({
-        success: false,
-        message: ''
-    });
+
+    const [error, setError] = useState(false);
+    const [success, setSuccess] = useState(false);
 
     const subscribe = async (e) => {
         e.preventDefault();
-        setResponse({
-            success: false,
-            message: 'You have successfully subscribed to Our Newsletter!'
-        });
+        setError({
+            status: false,
+            message: 'This functionality is currently not available.'
+        })
     }
 
     return (
@@ -37,21 +36,40 @@ const Footer = () => {
             </div>
 
             {
-                // Success or error message
-                response.message !== '' && response.success ? (
-                    <div className="mt-5 flex p-4 mb-4 text-sm text-green-800 rounded-lg bg-green-50 dark:bg-gray-800 dark:text-green-400" role="alert">
-                        <svg aria-hidden="true" className="flex-shrink-0 inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
-                        <span className="sr-only">Info</span>
-                        <div>
-                            <span className="font-medium">Success!</span> You&apos;re now subscribed to our newsletter.
+                success && (
+                    <div class="bg-white pb-6 sm:pb-8 lg:pb-12">
+                        <br />
+                        <div class="relative flex flex-wrap bg-indigo-500 px-4 py-3 sm:flex-nowrap sm:items-center sm:justify-center sm:gap-3 sm:pr-8 md:px-8">
+                            <div class="order-1 mb-2 inline-block w-11/12 max-w-screen-sm text-sm text-green-500 sm:order-none sm:mb-0 sm:w-auto md:text-base"><span className="font-medium">Success!</span>&nbsp;{success.message}</div>
+                            <div class="order-2 flex w-1/12 items-start justify-end sm:absolute sm:right-0 sm:order-none sm:mr-1 sm:w-auto xl:mr-3">
+                                <button type="button" class="text-white transition duration-100 hover:text-indigo-100 active:text-indigo-200" onClick={(e) => {
+                                    setSuccess(false)
+                                }}>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                ) : (
-                    <div className="mt-5 flex p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
-                        <svg aria-hidden="true" className="flex-shrink-0 inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
-                        <span className="sr-only">Info</span>
-                        <div>
-                            <span className="font-medium">Something went wrong!</span> Please try again later.
+                )
+            }
+
+            {
+                error && (
+                    <div class="bg-white pb-6 sm:pb-8 lg:pb-12">
+                        <br />
+                        <div class="relative flex flex-wrap bg-indigo-500 px-4 py-3 sm:flex-nowrap sm:items-center sm:justify-center sm:gap-3 sm:pr-8 md:px-8">
+                            <div class="order-1 mb-2 inline-block w-11/12 max-w-screen-sm text-sm text-red-500 sm:order-none sm:mb-0 sm:w-auto md:text-base"><span className="font-medium">Something went wrong!</span> {error.message}</div>
+                            <div class="order-2 flex w-1/12 items-start justify-end sm:absolute sm:right-0 sm:order-none sm:mr-1 sm:w-auto xl:mr-3">
+                                <button type="button" class="text-white transition duration-100 hover:text-indigo-100 active:text-indigo-200" onClick={(e) => {
+                                    setError(false)
+                                }}>
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 md:h-6 md:w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 )
