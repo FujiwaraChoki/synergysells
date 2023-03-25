@@ -12,8 +12,8 @@ function App({ Component, pageProps }) {
       <Head>
         <title>SynergySells</title>
       </Head>
-      <div class="bg-white pb-6 sm:pb-8 lg:pb-12">
-        <div class="mx-auto max-w-screen-2xl px-4 md:px-8">
+      <div className="bg-white pb-6 sm:pb-8 lg:pb-12">
+        <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
           {
             // Navbar
             (
