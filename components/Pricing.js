@@ -56,7 +56,7 @@ const Pricing = () => {
                         </div>
                     </div>
                     <div className="flex flex-col overflow-hidden rounded-lg border-2 border-indigo-500">
-                        <div className="bg-indigo-500 py-2 text-center text-sm font-semibold uppercase tracking-widest text-white">Popular choise</div>
+                        <div className="bg-indigo-500 py-2 text-center text-sm font-semibold uppercase tracking-widest text-white">popular choice</div>
 
                         <div className="flex flex-1 flex-col p-6 pt-8">
                             <div className="mb-12">
