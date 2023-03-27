@@ -38,9 +38,9 @@ const Navbar = () => {
                 hidden: { opacity: 0, y: -10 },
                 visible: { opacity: 1, y: 0 },
             }}
-            className={`fixed bottom-0 left-0 w-full bg-white shadow-lg ${isScrolled ? "py-2" : "py-4"
+            className={`fixed bottom-0 left-0 w-full shadow-lg ${isScrolled ? "py-2" : "py-4"
                 }`}
-        >s
+        >
             <nav className="sticky bottom-0 mx-auto flex w-full justify-between gap-8 border-t bg-white px-10 pt-5 pb-3 text-xs sm:max-w-md sm:rounded-t-xl sm:border-l sm:border-r sm:text-sm">
                 <Link href="" className={`flex flex-col items-center gap-1 ${isActive('home')}`} onClick={() => {
                     scrollToTop();
