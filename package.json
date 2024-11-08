@@ -13,7 +13,7 @@
     "autoprefixer": "^10.4.14",
     "framer-motion": "^10.9.1",
     "material-ui": "^0.20.2",
-    "next": "14.2.7",
+    "next": "14.2.10",
     "postcss": "^8.4.31",
     "postcss-preset-env": "^8.0.1",
     "react": "18.2.0",
